@@ -1,0 +1,18 @@
+[Unit]
+Description=Simple server
+After=syslog.target
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/work/www/myunit/shared/tmp/pids/service.pid (произвольно)
+WorkingDirectory=/work/www/myunit/current (папка с файлом)
+User=myunit
+OOMScoreAdjust=-100
+
+ExecStart=/usr/local/bin/bundle (папка с файлом)
+TimeoutSec=300
+Restart=always
+
+[Install]
+WantedBy=multi-user.target 
