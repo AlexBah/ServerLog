@@ -5,12 +5,11 @@ After=network.target
 
 [Service]
 Type=forking
-PIDFile=/work/www/myunit/shared/tmp/pids/service.pid (произвольно)
-WorkingDirectory=/work/www/myunit/current (папка с файлом)
-User=myunit
+WorkingDirectory=/home/alex/ServerLog/
+User=alex
 OOMScoreAdjust=-100
 
-ExecStart=/usr/local/bin/bundle (папка с файлом)
+ExecStart=/home/alex/ServerLog/main
 TimeoutSec=300
 Restart=always
 
