@@ -31,7 +31,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		requestString += fmt.Sprintf("Form[%q] = %q\n", k, v)
 	}
 	fmt.Fprintf(w, "%s", requestString)
-	writeLogFile(requestString)
+	//	writeLogFile(requestString)
 	mu.Lock()
 	count++
 	mu.Unlock()
