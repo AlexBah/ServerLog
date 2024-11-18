@@ -1,0 +1,4 @@
+env: "prod"
+tls_path: "/etc/letsencrypt/live/krypsy.online/"
+port: 8000
+timeout: 5s
