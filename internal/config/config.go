@@ -15,7 +15,7 @@ type Config struct {
 	Timeout time.Duration `yaml:"timeout"`
 }
 
-// returns config from config.yaml
+// returns config from *.yaml
 func MustLoad() *Config {
 	path := fetchConfigPath()
 
@@ -26,7 +26,7 @@ func MustLoad() *Config {
 	return MustLoadByPath(path)
 }
 
-// returns config from config.yaml
+// returns config from *.yaml
 func MustLoadByPath(configPath string) *Config {
 
 	if _, err := os.Stat(configPath); os.IsNotExist(err) {
